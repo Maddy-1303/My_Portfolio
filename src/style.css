@@ -1,0 +1,341 @@
+/* ---------------------------------------------------------------------------
+   Fonts — self-hosted via @fontsource (woff2, unicode-range subsetted).
+   Display: Fraunces (variable, weight axis). Body: IBM Plex Sans. Mono: IBM Plex Mono.
+   --------------------------------------------------------------------------- */
+@import '@fontsource-variable/fraunces/wght.css';
+@import '@fontsource/ibm-plex-sans/latin-400.css';
+@import '@fontsource/ibm-plex-sans/latin-500.css';
+@import '@fontsource/ibm-plex-sans/latin-600.css';
+@import '@fontsource/ibm-plex-mono/latin-400.css';
+@import '@fontsource/ibm-plex-mono/latin-500.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------------------
+   Design tokens
+   Colours are RGB channel triplets so Tailwind can apply opacity modifiers.
+   Dark is the design default; light is applied via [data-theme="light"] (set by
+   the inline script in <head>) or, when JS is unavailable, via the OS setting.
+   --------------------------------------------------------------------------- */
+@layer base {
+  :root {
+    color-scheme: dark;
+    --c-bg: 11 11 13;
+    --c-surface: 19 19 22;
+    --c-surface-2: 26 26 31;
+    --c-border: 38 38 44;
+    --c-ink: 237 237 234;
+    --c-muted: 154 154 148;
+    --c-accent: 245 185 66;
+    --c-accent-ink: 245 185 66;
+    --c-on-accent: 26 19 0;
+
+    /* Layout + motion primitives */
+    --nav-h: 4rem;
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --dur-fast: 150ms;
+    --dur-reveal: 500ms;
+  }
+
+  /* Light tokens — a considered inverse, not just swapped values. */
+  :root[data-theme='light'] {
+    color-scheme: light;
+    --c-bg: 250 248 244;
+    --c-surface: 255 255 255;
+    --c-surface-2: 242 239 232;
+    --c-border: 226 221 210;
+    --c-ink: 22 21 15;
+    --c-muted: 92 90 82;
+    --c-accent: 245 185 66;
+    --c-accent-ink: 138 90 0; /* amber text on paper needs to be deeper to pass AA */
+    --c-on-accent: 26 19 0;
+  }
+
+  /* No-JS fallback: honour the OS preference when nothing set data-theme. */
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme]) {
+      color-scheme: light;
+      --c-bg: 250 248 244;
+      --c-surface: 255 255 255;
+      --c-surface-2: 242 239 232;
+      --c-border: 226 221 210;
+      --c-ink: 22 21 15;
+      --c-muted: 92 90 82;
+      --c-accent-ink: 138 90 0;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-h) + 1rem);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-bg text-ink font-sans antialiased;
+    font-size: 1.0625rem; /* 17px */
+    line-height: 1.65;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+
+  ::selection {
+    @apply bg-accent text-on-accent;
+  }
+
+  /* One consistent, visible focus ring everywhere. */
+  :focus-visible {
+    outline: 2px solid rgb(var(--c-accent));
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1, h2, h3 {
+    @apply font-display text-ink;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    line-height: 1.1;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Components
+   --------------------------------------------------------------------------- */
+@layer components {
+  /* Page gutter: 20px @ 360, 32px @ 768, 48px @ 1280 */
+  .container-x {
+    @apply mx-auto w-full max-w-container px-5 md:px-8 xl:px-12;
+  }
+
+  /* Fluid type scale */
+  .text-display-1 {
+    font-size: clamp(2.5rem, 1.6rem + 4vw, 4.5rem);
+  }
+  .text-display-2 {
+    font-size: clamp(1.75rem, 1.3rem + 1.6vw, 2.5rem);
+  }
+  .text-display-3 {
+    font-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+  }
+
+  /* Monospace label used for section indices, dl terms, dates, tags */
+  .label {
+    @apply font-mono text-xs uppercase tracking-[0.08em] text-muted;
+  }
+
+  /* Section heading: mono index + display h2 + thin accent rule */
+  .section-head {
+    @apply mb-10 md:mb-14;
+  }
+  .section-head .label {
+    @apply mb-3 block;
+  }
+  .section-head h2 {
+    @apply text-display-2;
+  }
+  .section-head::after {
+    content: '';
+    @apply mt-5 block h-0.5 w-12 bg-accent;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded px-4 py-2.5 text-[0.9375rem] font-medium leading-none;
+    min-height: 2.75rem; /* 44px touch target */
+    transition: background-color var(--dur-fast) ease, color var(--dur-fast) ease,
+      border-color var(--dur-fast) ease, transform var(--dur-fast) ease;
+  }
+  .btn:active {
+    transform: translateY(1px);
+  }
+  .btn-primary {
+    @apply bg-accent text-on-accent border border-accent;
+  }
+  .btn-primary:hover {
+    background-color: rgb(var(--c-accent) / 0.88);
+  }
+  .btn-secondary {
+    @apply border border-border bg-transparent text-ink;
+  }
+  .btn-secondary:hover {
+    @apply bg-surface;
+    border-color: rgb(var(--c-accent) / 0.6);
+  }
+  .btn svg {
+    @apply h-4 w-4 shrink-0;
+  }
+
+  /* Status pill */
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1.5 font-mono text-xs text-ink;
+  }
+  .pill-dot {
+    @apply h-1.5 w-1.5 rounded-full bg-accent;
+    box-shadow: 0 0 0 3px rgb(var(--c-accent) / 0.18);
+  }
+
+  /* Cards */
+  .card {
+    @apply rounded-card border border-border bg-surface;
+    transition: border-color var(--dur-fast) ease, transform var(--dur-fast) ease;
+  }
+  .card:hover {
+    border-color: rgb(var(--c-accent) / 0.45);
+    transform: translateY(-2px);
+  }
+
+  /* Tags — mono, 1px border */
+  .tags {
+    @apply flex flex-wrap gap-2;
+  }
+  .tag {
+    @apply inline-flex items-center rounded border border-border bg-surface-2 px-2.5 py-1 font-mono text-[0.8125rem] leading-none text-ink;
+    padding-block: 0.4375rem;
+  }
+
+  /* Role badge on project cards */
+  .role {
+    @apply inline-flex items-center gap-1.5 whitespace-nowrap rounded border border-border bg-surface-2 px-2.5 py-1 font-mono text-xs text-accent-ink;
+  }
+
+  /* Definition-list blocks inside project cards */
+  .facts > div + div {
+    @apply mt-4;
+  }
+  .facts dt {
+    @apply label mb-1;
+  }
+  .facts dd {
+    @apply text-[0.9375rem] leading-relaxed text-ink;
+  }
+  .facts ul {
+    @apply list-disc space-y-1.5 pl-5 marker:text-accent;
+  }
+
+  /* Nav links with active-state underline */
+  .nav-link {
+    @apply relative rounded px-2 py-1 text-sm text-muted;
+    transition: color var(--dur-fast) ease;
+  }
+  .nav-link::after {
+    content: '';
+    @apply absolute inset-x-2 -bottom-0.5 h-px bg-accent opacity-0;
+    transition: opacity var(--dur-fast) ease;
+  }
+  .nav-link:hover,
+  .nav-link[aria-current='true'] {
+    @apply text-ink;
+  }
+  .nav-link[aria-current='true']::after {
+    @apply opacity-100;
+  }
+
+  /* Icon-only control (theme toggle, menu button, copy button) */
+  .icon-btn {
+    @apply inline-flex h-10 w-10 items-center justify-center rounded border border-border bg-transparent text-ink;
+    transition: border-color var(--dur-fast) ease, background-color var(--dur-fast) ease;
+  }
+  .icon-btn:hover {
+    @apply bg-surface;
+    border-color: rgb(var(--c-accent) / 0.6);
+  }
+  .icon-btn svg {
+    @apply h-[1.125rem] w-[1.125rem];
+  }
+
+  /* Timeline */
+  .timeline {
+    @apply relative border-l border-border pl-8 md:pl-10;
+  }
+  .timeline-item {
+    @apply relative;
+  }
+  .timeline-item::before {
+    content: '';
+    @apply absolute top-2 h-2.5 w-2.5 rounded-full border-2 border-bg bg-accent;
+    left: calc(-2rem - 5px - 0.5px);
+  }
+  @screen md {
+    .timeline-item::before {
+      left: calc(-2.5rem - 5px - 0.5px);
+    }
+  }
+
+  /* Inline text link */
+  .link {
+    @apply text-accent-ink underline decoration-accent/40 underline-offset-4;
+    transition: text-decoration-color var(--dur-fast) ease;
+  }
+  .link:hover {
+    text-decoration-color: rgb(var(--c-accent));
+  }
+
+  /* Toast for the copy-email confirmation */
+  .toast {
+    @apply pointer-events-none fixed bottom-6 left-1/2 z-50 -translate-x-1/2 rounded border border-border bg-surface px-4 py-2 font-mono text-sm text-ink opacity-0;
+    transform: translate(-50%, 8px);
+    transition: opacity var(--dur-fast) ease, transform var(--dur-fast) var(--ease-out);
+  }
+  .toast[data-show='true'] {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Motion — only applied when JS is running (html.js) and motion is allowed.
+   `.reveal` elements fade/rise into view once via IntersectionObserver.
+   `.hero-in` elements stagger in on load.
+   --------------------------------------------------------------------------- */
+@layer utilities {
+  @media (prefers-reduced-motion: no-preference) {
+    html.js .reveal {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity var(--dur-reveal) var(--ease-out), transform var(--dur-reveal) var(--ease-out);
+    }
+    html.js .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    html.js .hero-in {
+      animation: hero-in 600ms var(--ease-out) both;
+      animation-delay: calc(var(--i, 0) * 80ms);
+    }
+    @keyframes hero-in {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  }
+
+  /* Translucent sticky nav */
+  .nav-glass {
+    background-color: rgb(var(--c-bg) / 0.8);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+}

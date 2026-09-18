@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Madhan Prasath R — Ruby on Rails Developer</title>
+    <meta
+      name="description"
+      content="Ruby on Rails developer with 3+ years building production Rails systems and AI/LLM-powered applications. Sole Rails engineer on a medical-education SaaS. Bangalore, India · open to remote · immediate joiner."
+    />
+    <link rel="canonical" href="https://maddy-1303.github.io/My_Portfolio/" />
+    <meta name="author" content="Madhan Prasath R" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Madhan Prasath R" />
+    <meta property="og:title" content="Madhan Prasath R — Ruby on Rails Developer" />
+    <meta
+      property="og:description"
+      content="Building production Rails systems and AI/LLM-powered applications. 3+ years. Bangalore, India · open to remote · immediate joiner."
+    />
+    <meta property="og:url" content="https://maddy-1303.github.io/My_Portfolio/" />
+    <meta property="og:locale" content="en_IN" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Madhan Prasath R — Ruby on Rails Developer" />
+    <meta
+      name="twitter:description"
+      content="Building production Rails systems and AI/LLM-powered applications. 3+ years. Bangalore, India · open to remote · immediate joiner."
+    />
+
+    <!-- Theming -->
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b0b0d" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf8f4" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Apply the saved / OS theme before first paint (no flash) and flag JS availability. -->
+    <script>
+      (function () {
+        var d = document.documentElement;
+        var t = null;
+        try {
+          t = localStorage.getItem('theme');
+        } catch (e) {}
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        d.setAttribute('data-theme', t);
+        d.classList.add('js');
+      })();
+    </script>
+
+    <script type="module" src="/src/main.js"></script>
+  </head>
+
+  <body class="min-h-screen flex flex-col">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-accent focus:px-3 focus:py-2 focus:text-on-accent"
+      >Skip to content</a
+    >
+
+    <!-- Inline SVG sprite: referenced with <use href="#i-…"> below -->
+    <svg hidden aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="m3 7 9 6 9-6" />
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z" />
+        <circle cx="12" cy="10" r="3" />
+      </symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="9" y="9" width="11" height="11" rx="2" />
+        <path d="M5 15V5a2 2 0 0 1 2-2h10" />
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 17 17 7M8 7h9v9" />
+      </symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+      </symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </symbol>
+      <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 6l12 12M18 6 6 18" />
+      </symbol>
+      <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+      </symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+      </symbol>
+    </svg>
+
+    <!-- ============================================================ NAV -->
+    <header class="nav-glass sticky top-0 z-40 border-b border-border">
+      <nav class="container-x flex h-16 items-center justify-between gap-4" aria-label="Primary">
+        <a href="#main" class="font-display text-xl font-semibold tracking-tight text-ink">
+          MP<span class="sr-only"> — Madhan Prasath R, back to top</span>
+        </a>
+
+        <ul data-nav class="hidden items-center gap-1 md:flex">
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#experience">Experience</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="flex items-center gap-2">
+          <a
+            href="assets/Madhan_Prasath_R_Resume.pdf"
+            class="btn btn-secondary hidden !min-h-10 py-2 text-sm md:inline-flex"
+            download
+          >
+            <svg aria-hidden="true"><use href="#i-download" /></svg>
+            Resume
+          </a>
+
+          <button type="button" class="icon-btn" data-theme-toggle aria-label="Switch theme">
+            <svg class="hidden dark:block" aria-hidden="true"><use href="#i-sun" /></svg>
+            <svg class="dark:hidden" aria-hidden="true"><use href="#i-moon" /></svg>
+          </button>
+
+          <button
+            type="button"
+            class="icon-btn group md:hidden"
+            data-menu-button
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Open menu"
+          >
+            <svg class="group-aria-expanded:hidden" aria-hidden="true"><use href="#i-menu" /></svg>
+            <svg class="hidden group-aria-expanded:block" aria-hidden="true"><use href="#i-close" /></svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile drawer -->
+      <div id="mobile-menu" data-menu-panel hidden class="nav-glass border-t border-border md:hidden">
+        <ul class="container-x flex flex-col py-3">
+          <li><a class="block py-3 text-base text-ink" href="#about">About</a></li>
+          <li><a class="block py-3 text-base text-ink" href="#projects">Projects</a></li>
+          <li><a class="block py-3 text-base text-ink" href="#skills">Skills</a></li>
+          <li><a class="block py-3 text-base text-ink" href="#experience">Experience</a></li>
+          <li><a class="block py-3 text-base text-ink" href="#contact">Contact</a></li>
+          <li class="pt-3">
+            <a href="assets/Madhan_Prasath_R_Resume.pdf" class="btn btn-secondary w-full" download>
+              <svg aria-hidden="true"><use href="#i-download" /></svg>
+              Download Resume
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main id="main" class="flex-1">
+      <!-- ========================================================== HERO -->
+      <section aria-labelledby="hero-title" class="container-x pb-20 pt-14 md:pb-28 md:pt-24 lg:pt-28">
+        <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
+          <div class="max-w-3xl">
+            <p class="hero-in" style="--i: 0">
+              <span class="pill">
+                <span class="pill-dot" aria-hidden="true"></span>
+                Immediate joiner · Open to Rails / Full-stack roles
+              </span>
+            </p>
+
+            <h1 id="hero-title" class="hero-in mt-6 text-display-1" style="--i: 1">Madhan Prasath R</h1>
+
+            <p class="hero-in mt-3 font-display text-accent-ink text-display-3" style="--i: 2">
+              Ruby on Rails Developer
+            </p>
+
+            <p class="hero-in mt-5 font-mono text-[0.8125rem] leading-relaxed text-muted md:text-sm" style="--i: 3">
+              Building production Rails systems and AI/LLM-powered applications
+              <span class="mx-1.5 text-muted/60" aria-hidden="true">·</span>3+ years
+              <span class="mx-1.5 text-muted/60" aria-hidden="true">·</span>Bangalore, India (IST)
+              <span class="mx-1.5 text-muted/60" aria-hidden="true">·</span>Open to remote
+            </p>
+
+            <p class="hero-in mt-7 max-w-prose text-lg leading-relaxed text-ink" style="--i: 4">
+              Sole Rails engineer on a production medical-education SaaS — I own backends end to end,
+              from versioned APIs and billing integrations to a RAG-based AI chatbot.
+            </p>
+
+            <div class="hero-in mt-9 flex flex-wrap gap-3" style="--i: 5">
+              <a href="assets/Madhan_Prasath_R_Resume.pdf" class="btn btn-primary" download>
+                <svg aria-hidden="true"><use href="#i-download" /></svg>
+                Download Resume
+              </a>
+              <a href="https://github.com/Maddy-1303" class="btn btn-secondary" rel="me noopener" target="_blank">
+                <svg aria-hidden="true"><use href="#i-github" /></svg>
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/madhan-prasath-r-b73541227"
+                class="btn btn-secondary"
+                rel="me noopener"
+                target="_blank"
+              >
+                <svg aria-hidden="true"><use href="#i-linkedin" /></svg>
+                LinkedIn
+              </a>
+              <a href="mailto:madhanprasath2002r@gmail.com" class="btn btn-secondary">
+                <svg aria-hidden="true"><use href="#i-mail" /></svg>
+                Email
+              </a>
+            </div>
+          </div>
+
+          <!-- Optional headshot: hidden by main.js if /assets/photo.jpg is missing -->
+          <div data-headshot class="hero-in lg:justify-self-end" style="--i: 2">
+            <img
+              src="assets/photo.jpg"
+              alt="Portrait of Madhan Prasath R"
+              width="224"
+              height="224"
+              class="h-40 w-40 rounded-full border border-border object-cover md:h-56 md:w-56"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================= ABOUT -->
+      <section id="about" aria-labelledby="about-title" class="border-t border-border">
+        <div class="container-x py-16 md:py-24">
+          <div class="section-head reveal">
+            <span class="label">01 / About</span>
+            <h2 id="about-title">Engineer first, framework second.</h2>
+          </div>
+
+          <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-16">
+            <div class="reveal max-w-prose space-y-5 text-[1.0625rem] leading-relaxed text-ink">
+              <p>
+                I started writing Ruby on Rails in 2023, through a campus-placed internship at Mallow
+                Technologies, after finishing a B.E. in Aeronautical Engineering at Sri Ramakrishna
+                Engineering College, Coimbatore (GPA 8.1/10). Aeronautics is an unforgiving discipline:
+                you learn to reason about whole systems, tolerances and failure modes before you build
+                anything. That habit carried straight into how I design software.
+              </p>
+              <p>
+                From there I grew into a full-stack developer at Magicpitch, working across Rails and
+                React on a B2B AI lead-generation platform. Today I am the sole Rails engineer at
+                Applaunch, where I own a production medical-education SaaS end to end: APIs, billing,
+                authentication, translations, background jobs and deployment.
+              </p>
+              <p>
+                I am now moving deeper into AI. I am architecting a RAG-based LLM chatbot that answers
+                questions grounded in verified course content, and I use AI coding tools every day under
+                one strict rule: <em class="font-medium not-italic text-accent-ink">AI drafts, I own and verify every line.</em>
+              </p>
+              <p>
+                What I care about is ownership and reliability: idempotent systems, versioning, audit
+                trails, and code the next engineer can read without a guide. I build things real users
+                depend on, and I am looking for a strong team to learn from and a bigger scale to grow
+                into.
+              </p>
+            </div>
+
+            <aside class="reveal">
+              <dl class="divide-y divide-border border-y border-border text-sm">
+                <div class="flex justify-between gap-4 py-3">
+                  <dt class="label">Based in</dt>
+                  <dd class="text-right text-ink">Bangalore, India (IST)</dd>
+                </div>
+                <div class="flex justify-between gap-4 py-3">
+                  <dt class="label">Experience</dt>
+                  <dd class="text-right text-ink">3+ years</dd>
+                </div>
+                <div class="flex justify-between gap-4 py-3">
+                  <dt class="label">Currently</dt>
+                  <dd class="text-right text-ink">Sole Rails engineer, Applaunch</dd>
+                </div>
+                <div class="flex justify-between gap-4 py-3">
+                  <dt class="label">Availability</dt>
+                  <dd class="text-right text-ink">Immediate · Open to remote</dd>
+                </div>
+                <div class="flex justify-between gap-4 py-3">
+                  <dt class="label">Focus</dt>
+                  <dd class="text-right text-ink">Rails · APIs · AI/LLM</dd>
+                </div>
+              </dl>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================== PROJECTS -->
+      <section id="projects" aria-labelledby="projects-title" class="border-t border-border">
+        <div class="container-x py-16 md:py-24">
+          <div class="section-head reveal">
+            <span class="label">02 / Featured projects</span>
+            <h2 id="projects-title">Work I built, own, or contributed to.</h2>
+            <p class="mt-4 max-w-prose text-[0.9375rem] text-muted">
+              Role labels are literal. <span class="text-ink">Built</span> means I built it.
+              <span class="text-ink">Own &amp; maintain</span> means I run it in production.
+              <span class="text-ink">Contributed</span> means I worked on it as part of a team.
+            </p>
+          </div>
+
+          <div class="space-y-5">
+            <!-- Project 1 — flagship -->
+            <article class="card reveal p-6 md:p-8 lg:p-10">
+              <div class="grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12">
+                <div>
+                  <span class="label">01 · Applaunch</span>
+                  <h3 class="mt-2 text-display-3">RAG-based AI Chatbot</h3>
+                  <p class="mt-3"><span class="role">Architect · in progress</span></p>
+
+                  <dl class="facts mt-6">
+                    <div>
+                      <dt>Problem</dt>
+                      <dd>
+                        Medical learners need accurate answers grounded in verified course content, not
+                        hallucinated responses.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Impact</dt>
+                      <dd>
+                        Grounded, verifiable AI answers over medical content. Status: architecture and
+                        implementation in progress.
+                      </dd>
+                    </div>
+                  </dl>
+
+                  <ul class="tags mt-6" aria-label="Stack">
+                    <li class="tag">Ruby on Rails</li>
+                    <li class="tag">Node.js</li>
+                    <li class="tag">Vector DB</li>
+                    <li class="tag">Embeddings</li>
+                    <li class="tag">LLM APIs</li>
+                  </ul>
+                </div>
+
+                <dl class="facts lg:border-l lg:border-border lg:pl-12">
+                  <div>
+                    <dt>What I'm building</dt>
+                    <dd>
+                      A retrieval-augmented generation pipeline as a separate Node.js service alongside
+                      the Rails app. Course content is chunked, converted to embeddings and stored in a
+                      vector database. At query time the question is embedded, similar chunks are
+                      retrieved, and that context is passed to the LLM so answers are grounded in real
+                      source material. The work includes evaluating answer accuracy and hallucination
+                      against the source content.
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+
+            <!-- Project 2 — flagship -->
+            <article class="card reveal p-6 md:p-8 lg:p-10">
+              <div class="grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12">
+                <div>
+                  <span class="label">02 · Applaunch</span>
+                  <h3 class="mt-2 text-display-3">MRI Essentials: Medical Education SaaS</h3>
+                  <p class="mt-3"><span class="role">Sole Rails engineer · owner &amp; maintainer</span></p>
+
+                  <dl class="facts mt-6">
+                    <div>
+                      <dt>Problem</dt>
+                      <dd>
+                        Publishing medical content carries real risk. Wrong information must be
+                        reviewable, traceable and reversible.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Impact</dt>
+                      <dd>
+                        Safe, auditable content changes in a high-stakes domain, and reliable billing
+                        across three app stores.
+                      </dd>
+                    </div>
+                  </dl>
+
+                  <ul class="tags mt-6" aria-label="Stack">
+                    <li class="tag">Ruby on Rails</li>
+                    <li class="tag">MySQL (RDS)</li>
+                    <li class="tag">Node.js</li>
+                    <li class="tag">AWS (EC2, S3, CloudFront, CodeDeploy)</li>
+                    <li class="tag">Stripe</li>
+                    <li class="tag">PaperTrail</li>
+                    <li class="tag">Devise-JWT</li>
+                  </ul>
+                </div>
+
+                <dl class="facts lg:border-l lg:border-border lg:pl-12">
+                  <div>
+                    <dt>What I built</dt>
+                    <dd>
+                      A draft-and-publish chapter versioning and approval workflow using PaperTrail.
+                      Authors draft, peers approve, content publishes as a new version, with full audit
+                      history and one-step rollback.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>What I own &amp; maintain</dt>
+                    <dd>
+                      <ul>
+                        <li>
+                          Multi-provider billing (Stripe, Apple StoreKit 2, Google Play) with idempotent
+                          webhook handling via a Node microservice
+                        </li>
+                        <li>Devise-JWT authentication with server-side token revocation (denylist)</li>
+                        <li>A 10+ language translation pipeline (Globalize + DeepL)</li>
+                        <li>Background and scheduled jobs (Delayed Job, Active Job, Whenever)</li>
+                        <li>Media on CarrierWave / S3 / CloudFront</li>
+                        <li>Push notifications via Rpush</li>
+                        <li>Four-environment AWS CodeDeploy pipeline</li>
+                        <li>Versioned v1/v2 REST APIs serving web, iOS and Android</li>
+                      </ul>
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </article>
+
+            <!-- Projects 3–6 -->
+            <div class="grid gap-5 md:grid-cols-2">
+              <article class="card reveal flex flex-col p-6 md:p-8">
+                <span class="label">03 · Team project</span>
+                <h3 class="mt-2 text-display-3">ImInNeed: SOS Emergency Response Platform</h3>
+                <p class="mt-3"><span class="role">Backend contributor · team</span></p>
+
+                <dl class="facts mt-6 flex-1">
+                  <div>
+                    <dt>Problem</dt>
+                    <dd>People in danger need to alert nearby responders instantly and reliably.</dd>
+                  </div>
+                  <div>
+                    <dt>What I worked on</dt>
+                    <dd>
+                      Node.js / Express / MongoDB backend: geospatial nearby-responder search
+                      (<code class="font-mono text-[0.875em]">$nearSphere</code> with Haversine distance),
+                      critical push alerts via FCM and APNS, JWT auth with JTI blacklist and TTL index for
+                      revocation, dual app-store (Apple / Google) purchase webhooks, GDPR data features,
+                      42 REST endpoints, a Jest test suite, GitLab CI with Trivy vulnerability and
+                      Gitleaks secret scanning, and AWS CodeDeploy.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Impact</dt>
+                    <dd>Reliable real-time emergency alerting with hardened auth and CI-enforced security.</dd>
+                  </div>
+                </dl>
+
+                <ul class="tags mt-6" aria-label="Stack">
+                  <li class="tag">Node.js</li>
+                  <li class="tag">Express</li>
+                  <li class="tag">MongoDB</li>
+                  <li class="tag">FCM / APNS</li>
+                  <li class="tag">JWT</li>
+                  <li class="tag">Jest</li>
+                  <li class="tag">GitLab CI</li>
+                  <li class="tag">AWS</li>
+                </ul>
+              </article>
+
+              <article class="card reveal flex flex-col p-6 md:p-8">
+                <span class="label">04 · Team project</span>
+                <h3 class="mt-2 text-display-3">KORB: B2B Wholesale Marketplace</h3>
+                <p class="mt-3"><span class="role">Backend contributor · team</span></p>
+
+                <dl class="facts mt-6 flex-1">
+                  <div>
+                    <dt>Problem</dt>
+                    <dd>
+                      Retailers and wholesalers need a multi-party marketplace with distinct roles,
+                      payments and real-time updates.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>What I worked on</dt>
+                    <dd>
+                      NestJS / TypeScript / MongoDB backend: ~300 REST endpoints across four role-based
+                      portals, Stripe Connect multi-party payments, role-based access control (6 roles),
+                      Socket.io real-time updates, and Firebase integration.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Impact</dt>
+                    <dd>A large, structured multi-role platform with secure split payments.</dd>
+                  </div>
+                </dl>
+
+                <ul class="tags mt-6" aria-label="Stack">
+                  <li class="tag">NestJS</li>
+                  <li class="tag">TypeScript</li>
+                  <li class="tag">MongoDB</li>
+                  <li class="tag">Stripe Connect</li>
+                  <li class="tag">Socket.io</li>
+                  <li class="tag">Firebase</li>
+                </ul>
+              </article>
+
+              <article class="card reveal flex flex-col p-6 md:p-8">
+                <span class="label">05 · Magicpitch</span>
+                <h3 class="mt-2 text-display-3">Magicpitch: AI Lead-Generation Platform</h3>
+                <p class="mt-3"><span class="role">Rails + React developer · 2-person team</span></p>
+
+                <dl class="facts mt-6 flex-1">
+                  <div>
+                    <dt>Problem</dt>
+                    <dd>
+                      Sales teams need to find prospects, run outreach campaigns and track results in one
+                      place.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>What I did</dt>
+                    <dd>
+                      Co-built the dashboard and admin (Rails + React): campaign scheduling, email
+                      tracking, prospect import/export and third-party integrations. Profiled and fixed
+                      query and rendering bottlenecks, reducing dashboard load time by 25%.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Impact</dt>
+                    <dd>
+                      A faster, more stable platform, and shipped integrations that lifted customer
+                      satisfaction.
+                    </dd>
+                  </div>
+                </dl>
+
+                <ul class="tags mt-6" aria-label="Stack">
+                  <li class="tag">Ruby on Rails</li>
+                  <li class="tag">React</li>
+                  <li class="tag">PostgreSQL</li>
+                </ul>
+              </article>
+
+              <article class="card reveal flex flex-col p-6 md:p-8">
+                <span class="label">06 · Magicpitch</span>
+                <h3 class="mt-2 text-display-3">LinkedIn Chrome Extension + Google Sheets Add-on</h3>
+                <p class="mt-3"><span class="role">Solo builder</span></p>
+
+                <dl class="facts mt-6 flex-1">
+                  <div>
+                    <dt>Problem</dt>
+                    <dd>
+                      Teams needed to capture prospect data from LinkedIn and work with it in spreadsheets
+                      without manual copying.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>What I built</dt>
+                    <dd>
+                      A Chrome Extension for browser-level LinkedIn data extraction into the platform
+                      (Sept 2024 – Jul 2025), and a Google Sheets Add-on (Apps Script + React) to fetch,
+                      manipulate and analyse platform data directly in Sheets.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Impact</dt>
+                    <dd>Removed manual data-entry work for internal teams.</dd>
+                  </div>
+                </dl>
+
+                <ul class="tags mt-6" aria-label="Stack">
+                  <li class="tag">JavaScript</li>
+                  <li class="tag">Chrome Extension APIs</li>
+                  <li class="tag">Google Apps Script</li>
+                  <li class="tag">React</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================== SKILLS -->
+      <section id="skills" aria-labelledby="skills-title" class="border-t border-border">
+        <div class="container-x py-16 md:py-24">
+          <div class="section-head reveal">
+            <span class="label">03 / Skills</span>
+            <h2 id="skills-title">What I work with.</h2>
+          </div>
+
+          <div class="grid gap-x-12 gap-y-10 md:grid-cols-2">
+            <div class="reveal">
+              <h3 class="label mb-3">Backend</h3>
+              <ul class="tags">
+                <li class="tag">Ruby</li>
+                <li class="tag">Ruby on Rails</li>
+                <li class="tag">Active Record</li>
+                <li class="tag">Node.js</li>
+                <li class="tag">Express.js</li>
+                <li class="tag">NestJS</li>
+                <li class="tag">RESTful API design</li>
+                <li class="tag">MVC</li>
+                <li class="tag">Service objects</li>
+                <li class="tag">Background jobs (Active Job, Delayed Job)</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3 class="label mb-3">AI / LLM</h3>
+              <ul class="tags">
+                <li class="tag">RAG architecture</li>
+                <li class="tag">Embeddings &amp; vector search</li>
+                <li class="tag">LLM API integration</li>
+                <li class="tag">AI-assisted development (Cursor, Claude) with review-and-verify discipline</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3 class="label mb-3">Frontend</h3>
+              <ul class="tags">
+                <li class="tag">JavaScript (ES6+)</li>
+                <li class="tag">TypeScript (via NestJS)</li>
+                <li class="tag">React.js</li>
+                <li class="tag">HTML5</li>
+                <li class="tag">CSS3</li>
+                <li class="tag">Tailwind</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3 class="label mb-3">Data</h3>
+              <ul class="tags">
+                <li class="tag">MySQL</li>
+                <li class="tag">PostgreSQL</li>
+                <li class="tag">MongoDB</li>
+                <li class="tag">Redis</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3 class="label mb-3">Cloud &amp; DevOps</h3>
+              <ul class="tags">
+                <li class="tag">AWS (EC2, S3, CloudFront, CodeDeploy, IAM, Lambda)</li>
+                <li class="tag">Docker</li>
+                <li class="tag">GitLab CI</li>
+                <li class="tag">Bitbucket Pipelines</li>
+                <li class="tag">PM2</li>
+                <li class="tag">Linux</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3 class="label mb-3">Quality &amp; Security</h3>
+              <ul class="tags">
+                <li class="tag">SonarQube</li>
+                <li class="tag">Unit testing (Jest)</li>
+                <li class="tag">Trivy &amp; Gitleaks scanning</li>
+                <li class="tag">JWT auth</li>
+                <li class="tag">Idempotent webhook design</li>
+                <li class="tag">Code review</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3 class="label mb-3">Integrations</h3>
+              <ul class="tags">
+                <li class="tag">Stripe</li>
+                <li class="tag">Apple StoreKit 2</li>
+                <li class="tag">Google Play Billing</li>
+                <li class="tag">FCM / APNS</li>
+                <li class="tag">DeepL</li>
+                <li class="tag">Socket.io</li>
+                <li class="tag">Firebase</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3 class="label mb-3">Workflow</h3>
+              <ul class="tags">
+                <li class="tag">Git / GitHub / GitLab / Bitbucket</li>
+                <li class="tag">Jira</li>
+                <li class="tag">Confluence</li>
+                <li class="tag">Agile / Scrum</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================== EXPERIENCE -->
+      <section id="experience" aria-labelledby="experience-title" class="border-t border-border">
+        <div class="container-x py-16 md:py-24">
+          <div class="section-head reveal">
+            <span class="label">04 / Experience</span>
+            <h2 id="experience-title">Three years, three teams, growing scope.</h2>
+          </div>
+
+          <ol class="timeline space-y-12">
+            <li class="timeline-item reveal">
+              <p class="label">Sept 2025 – Present</p>
+              <h3 class="mt-2 text-xl">Ruby on Rails Developer <span class="text-muted">— Applaunch</span></h3>
+              <p class="mt-1 text-sm text-muted">Bangalore</p>
+              <p class="mt-3 max-w-prose text-[0.9375rem] leading-relaxed">
+                Sole Rails engineer on a production medical-education SaaS. Built the PaperTrail
+                versioning workflow; architecting a RAG chatbot; own billing, auth, translations, jobs
+                and AWS deployment; contribute to Node.js / NestJS services.
+              </p>
+            </li>
+
+            <li class="timeline-item reveal">
+              <p class="label">Dec 2023 – Jul 2025</p>
+              <h3 class="mt-2 text-xl">
+                Ruby on Rails &amp; React Developer <span class="text-muted">— Magicpitch</span>
+              </h3>
+              <p class="mt-1 text-sm text-muted">Bangalore</p>
+              <p class="mt-3 max-w-prose text-[0.9375rem] leading-relaxed">
+                Co-built the Rails + React dashboard and admin for an AI lead-generation platform,
+                including a 25% load-time reduction. Solo-built a LinkedIn Chrome Extension and a Google
+                Sheets Add-on.
+              </p>
+            </li>
+
+            <li class="timeline-item reveal">
+              <p class="label">Jan 2023 – Aug 2023</p>
+              <h3 class="mt-2 text-xl">
+                Ruby on Rails Developer Intern <span class="text-muted">— Mallow Technologies</span>
+              </h3>
+              <p class="mt-1 text-sm text-muted">Karur</p>
+              <p class="mt-3 max-w-prose text-[0.9375rem] leading-relaxed">
+                Built Rails + Ajax e-commerce web applications, optimized SQL, and worked with QA in
+                Agile sprints.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ===================================================== EDUCATION -->
+      <section id="education" aria-labelledby="education-title" class="border-t border-border">
+        <div class="container-x py-16 md:py-24">
+          <div class="section-head reveal">
+            <span class="label">05 / Education &amp; learning</span>
+            <h2 id="education-title">Foundations.</h2>
+          </div>
+
+          <dl class="reveal divide-y divide-border border-y border-border">
+            <div class="grid gap-2 py-5 md:grid-cols-[200px_minmax(0,1fr)] md:gap-8">
+              <dt class="label pt-1">Degree</dt>
+              <dd>
+                <p class="text-ink">B.E. Aeronautical Engineering</p>
+                <p class="mt-1 text-sm text-muted">
+                  Sri Ramakrishna Engineering College, Coimbatore · 2019–2023 · GPA 8.1/10
+                </p>
+              </dd>
+            </div>
+            <div class="grid gap-2 py-5 md:grid-cols-[200px_minmax(0,1fr)] md:gap-8">
+              <dt class="label pt-1">Courses</dt>
+              <dd class="text-ink">
+                React.js Advanced (Udemy, 2024) · AWS Cloud Fundamentals (2025) · CI/CD with Jenkins,
+                Docker &amp; GitLab (2025)
+              </dd>
+            </div>
+            <div class="grid gap-2 py-5 md:grid-cols-[200px_minmax(0,1fr)] md:gap-8">
+              <dt class="label pt-1">Languages</dt>
+              <dd class="text-ink">Tamil (native) · English · Hindi</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ======================================================= CONTACT -->
+      <section id="contact" aria-labelledby="contact-title" class="border-t border-border">
+        <div class="container-x py-16 md:py-24">
+          <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16">
+            <div class="reveal">
+              <div class="section-head !mb-8">
+                <span class="label">06 / Contact</span>
+                <h2 id="contact-title">Let's talk.</h2>
+              </div>
+              <p class="max-w-prose text-lg text-ink">
+                Open to Ruby on Rails and full-stack roles — immediate joiner.
+              </p>
+
+              <div class="mt-8 flex flex-wrap items-center gap-3">
+                <a
+                  href="mailto:madhanprasath2002r@gmail.com"
+                  class="link break-all font-display text-xl md:text-2xl"
+                >
+                  madhanprasath2002r@gmail.com
+                </a>
+                <button
+                  type="button"
+                  class="icon-btn"
+                  data-copy-email="madhanprasath2002r@gmail.com"
+                  aria-label="Copy email address to clipboard"
+                >
+                  <svg aria-hidden="true"><use href="#i-copy" /></svg>
+                </button>
+              </div>
+
+              <p class="mt-4">
+                <a href="tel:+919025537550" class="inline-flex items-center gap-2 text-ink hover:text-accent-ink">
+                  <svg class="h-4 w-4 text-muted" aria-hidden="true"><use href="#i-phone" /></svg>
+                  <span class="font-mono text-sm">+91 90255 37550</span>
+                </a>
+              </p>
+            </div>
+
+            <div class="reveal lg:pt-14">
+              <ul class="divide-y divide-border border-y border-border">
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/madhan-prasath-r-b73541227"
+                    class="group flex items-center justify-between gap-4 py-4 text-ink"
+                    rel="me noopener"
+                    target="_blank"
+                  >
+                    <span class="flex items-center gap-3">
+                      <svg class="h-4 w-4 text-muted" aria-hidden="true"><use href="#i-linkedin" /></svg>
+                      LinkedIn
+                    </span>
+                    <span class="flex items-center gap-2 font-mono text-xs text-muted group-hover:text-accent-ink">
+                      madhan-prasath-r-b73541227
+                      <svg class="h-3.5 w-3.5" aria-hidden="true"><use href="#i-arrow" /></svg>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/Maddy-1303"
+                    class="group flex items-center justify-between gap-4 py-4 text-ink"
+                    rel="me noopener"
+                    target="_blank"
+                  >
+                    <span class="flex items-center gap-3">
+                      <svg class="h-4 w-4 text-muted" aria-hidden="true"><use href="#i-github" /></svg>
+                      GitHub
+                    </span>
+                    <span class="flex items-center gap-2 font-mono text-xs text-muted group-hover:text-accent-ink">
+                      Maddy-1303
+                      <svg class="h-3.5 w-3.5" aria-hidden="true"><use href="#i-arrow" /></svg>
+                    </span>
+                  </a>
+                </li>
+                <li class="flex items-center justify-between gap-4 py-4 text-ink">
+                  <span class="flex items-center gap-3">
+                    <svg class="h-4 w-4 text-muted" aria-hidden="true"><use href="#i-pin" /></svg>
+                    Location
+                  </span>
+                  <span class="text-right font-mono text-xs text-muted">Bangalore, India · Open to remote</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ======================================================== FOOTER -->
+    <footer class="border-t border-border">
+      <div class="container-x flex flex-col gap-3 py-8 text-sm text-muted md:flex-row md:items-center md:justify-between">
+        <p>© <span data-year>2026</span> Madhan Prasath R</p>
+        <p class="font-mono text-xs">Built with care, no templates.</p>
+      </div>
+    </footer>
+
+    <div class="toast" data-toast role="status" aria-live="polite" data-show="false"></div>
+  </body>
+</html>
