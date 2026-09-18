@@ -1,6 +1,7 @@
 # Build the Vite site and deploy the static output to GitHub Pages.
 #
-# One-time setup in the repository: Settings → Pages → Source: "GitHub Actions".
+# The first run enables Pages automatically (enablement: true). If that step is
+# ever refused, set Settings → Pages → Source to "GitHub Actions" once by hand.
 # Deploys run on every push to `main` and can also be triggered manually.
 name: Deploy to GitHub Pages
 
@@ -40,6 +41,9 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          # Create the Pages site on first run so no manual Settings step is needed.
+          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
